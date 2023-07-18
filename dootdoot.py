@@ -25,26 +25,8 @@ help_command = commands.DefaultHelpCommand(no_category='Commands')
 bot = sntgroups.bot
 
 groupCmds = SlashCommandGroup('event', 'For creating events')
-# Owners in order: Me, Steven, Kai, James, Haku
-owners = [134517959124058112, 406690221694910464, 261652932947083274, 357243868053372929, 245591249027989504]
 
-# -----------------------------------------------------------------------------
-
-###
-# # KRISSY MED REMINDER
-# ####
-
-@tasks.loop(minutes=1)
-async def reminder_loop():
-    user = bot.get_user(134517959124058112)
-    tz = ZoneInfo("America/New_York")
-    t = datetime.now(tz)
-    if t.hour == 10 and t.minute == 0:
-        await user.send("take viibryd!")
-        print("reminder sent!")
-
-    # Steven's ID: 406690221694910464
-    # My ID: 134517959124058112
+owners = [] # IDs go in here
 
 # -----------------------------------------------------------------------------
 
