@@ -335,73 +335,6 @@ async def province(ctx):
 # -----------------------------------------------------------------------------
 
 ####
-# SQUID GAME SIM
-####
-
-# @bot.slash_command(aliases=['sg', 'dg', 'dootgame'])
-# async def squidgame(ctx):
-#     await ctx.respond('hi, you activated the DOOT GAMES! (squid game simulator!)')
-
-#     global times_used
-#     await ctx.respond(f"y or n")
-
-#     # This will make sure that the response will only be registered if the following
-#     # conditions are met:
-#     def check(msg):
-#         return msg.author == ctx.author and msg.channel == ctx.channel and \
-#         msg.content.lower() in ["y", "n"]
-
-#     msg = await client.wait_for("message", check=check)
-#     if msg.content.lower() == "y":
-#         await ctx.respond("You said yes!")
-#     else:
-#         await ctx.respond("You said no!")
-
-#     times_used = times_used + 1
-
-#     # code
-#     try:
-#         msg = await client.wait_for("message", check=check, timeout=30) # 30 seconds to reply
-#     except asyncio.TimeoutError:
-#         await ctx.respond("oops, you didn't reply in time!")
-
-
-# -----------
-
-
-# @bot.slash_command(aliases=['sg', 'dg', 'dootgame'])
-# async def squidgame(ctx):
-#     await ctx.respond('hi, you activated the DOOT GAMES! (squid game simulator!)')
-
-#     global times_used
-#     cont = True
-
-#     try:
-#         while cont:
-#             await ctx.respond(f"enter a person's name")
-
-#             def check(msg):
-#                 return msg.author == ctx.author and msg.channel == ctx.channel
-            
-#             msg = await asyncio.bot.wait_for("message", check=check, timeout=30)
-
-#             if msg:
-#                 await ctx.respond("woohoo!")
-#             else:
-#                 await ctx.respond("uh oh!!!")
-            
-#             times_used = times_used + 1
-
-#             if times_used > 100:
-#                 await ctx.respond("you've reached the maximum number of people! let's begin the games!")
-#                 cont = False
-#     except asyncio.TimeoutError:
-#         await ctx.respond("oops, you didn't reply in time!")
-
-
-# -----------------------------------------------------------------------------
-
-####
 # AWAKE
 ####
 
@@ -465,22 +398,6 @@ async def kitchen(ctx):
     await ctx.respond('If you can\'t take the heat, stay out of the kitchen.')
 
 # -----------------------------------------------------------------------------
-
-####
-# FITNESSGRAM
-####
-
-@bot.slash_command(aliases=['fitness gram'], description="the fitnessgram pacer test is a")
-async def fitnessgram(ctx):
-    await ctx.respond('''The FitnessGram Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. 
-    The 20 meter pacer test will begin in 30 seconds. Line up at the start. 
-    The running speed starts slowly but gets faster each minute after you hear this signal bodeboop. 
-    A sing lap should be completed every time you hear this sound. ding Remember to run in a straight line and run as long as possible. 
-    The second time you fail to complete a lap before the sound, your test is over. 
-    The test will begin on the word start. On your mark. Get ready!… Start. ding''')
-
-# -----------------------------------------------------------------------------
-
 
 ####
 # COMMAND TO PURGE MESSAGES
